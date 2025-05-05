@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Günün Mübarək, Günel!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #fbd4d4;
+      --text-color: #333;
+      --font-header: 'Great Vibes', cursive;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: linear-gradient(to right, #fff0f5, #fcefee);
+      color: var(--text-color);
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--primary-color);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: var(--font-header);
+      font-size: 3rem;
+      color: #d6336c;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      margin: 3rem auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+      z-index: 0;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+    }
+
+    #heart-container {
+      width: 100%;
+      height: 300px;
+      margin: 1rem auto;
+    }
+
+    .message-card {
+      text-align: center;
+      margin-top: 2rem;
+      background: #fff7f9;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 2s ease;
+    }
+
+    .message-card h2 {
+      font-family: var(--font-header);
+      font-size: 2.4rem;
+      color: #c9184a;
+      margin-bottom: 1rem;
+    }
+
+    .message-card p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Ad Günün Mübarək, Günel!</h1>
+  </header>
+
+  <div class="slideshow">
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.18_a65c7b71.jpg" class="active" alt="Şəkil 1" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.19_c18cebc4.jpg" alt="Şəkil 2" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.20_3d8fc7a4.jpg" alt="Şəkil 3" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.20_3d122669.jpg" alt="Şəkil 4" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.20_50bb0d2f.jpg" alt="Şəkil 5" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.21_3dc71f0a.jpg" alt="Şəkil 6" />
+    <img src="image/WhatsApp Görsel 2025-04-23 saat 23.24.21_f4ed9739.jpg" alt="Şəkil 7" />
+    <img src="image/WhatsApp Görsel 2025-04-24 saat 00.27.49_a98974d1.jpg" alt="Şəkil 8" />
+    <img src="image/WhatsApp Görsel 2025-04-24 saat 00.27.49_de3e20ee.jpg" alt="Şəkil 9" />
+    <img src="image/WhatsApp Görsel 2025-04-24 saat 00.27.49_ec83368d.jpg" alt="Şəkil 10" />
+    <img src="image/WhatsApp Görsel 2025-04-24 saat 00.27.50_97b62998.jpg" alt="Şəkil 11" />
+    <img src="image/WhatsApp Görsel 2025-04-24 saat 00.27.50_e1d627eb.jpg" alt="Şəkil 12" />
+  </div>
+
+  <div id="heart-container"></div>
+
+  <section class="message-card">
+    <h2>Canım Günel</h2>
+    <p>
+      Bəzən insan həyatında bir səs, bir baxış, bir nəfəs kimi doğma birini tapar — sən mənim üçün məhz elə birisən.
+      <br><br>
+      Səninlə keçirdiyim hər an mənim üçün bir nağıl kimidir. Ruhuma toxunan, qəlbimə dincəlik gətirən insan olduğun
+      üçün sənə minnətdaram. <br><br>
+      Ad günün mübarək, canım Günel. Bu gün, sabah və hər zaman səninləyəm. ❤️
+    </p>
+  </section>
+
+  <footer>
+    © 2025 | Səni sevən bir ürək tərəfindən hazırlandı 💖
+  </footer>
+
+  <script>
+    // Slideshow
+    const slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+    function showSlide(index) {
+      slides.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 3000);
+
+    // 3D Heart
+    // 3D Heart (gənifləndirilmiş və parlaq)
+    const container = document.getElementById('heart-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    container.appendChild(renderer.domElement);
+
+    const light = new THREE.PointLight(0xff5f7e, 2);
+    light.position.set(10, 10, 20);
+    scene.add(light);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+
+    const heartShape = new THREE.Shape();
+    heartShape.moveTo(0, 0);
+    heartShape.bezierCurveTo(0, 5, -6.5, 5, -6.5, 0);
+    heartShape.bezierCurveTo(-6.5, -5, 0, -6.5, 0, -9);
+    heartShape.bezierCurveTo(0, -6.5, 6.5, -5, 6.5, 0);
+    heartShape.bezierCurveTo(6.5, 5, 0, 5, 0, 0);
+
+    const extrudeSettings = {
+      depth: 4,
+      bevelEnabled: true,
+      bevelSegments: 15,
+      steps: 4,
+      bevelSize: 0.8,
+      bevelThickness: 1.2
+    };
+
+    const geometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings);
+    geometry.center();
+    const material = new THREE.MeshPhongMaterial({
+      color: 0xff3e6c,
+      shininess: 180,
+      specular: 0xffffff
+    });
+
+    const heart = new THREE.Mesh(geometry, material);
+    scene.add(heart);
+    camera.position.z = 28;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      heart.rotation.y += 0.01;
+      heart.rotation.x += 0.005;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+  </script>
+
+</body>
+
+</html>
